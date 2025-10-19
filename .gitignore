@@ -1,2 +1,8 @@
 .idea/
 build/reports/
+
+   .gradle/
+        build/
+        *.iml
+        local.properties
+        .idea/
