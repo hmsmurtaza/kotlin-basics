@@ -6,3 +6,6 @@ build/reports/
         *.iml
         local.properties
         .idea/
+
+
+**/build
