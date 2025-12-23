@@ -25,3 +25,8 @@ kotlin {
 application {
     mainClass.set("MainKt")
 }
+
+// in build.gradle.kts (kotlin)
+kotlin {
+    jvmToolchain(17) // or 17
+}
