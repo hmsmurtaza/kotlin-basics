@@ -1,6 +1,6 @@
 package kotlin_generics.use_of_out_with_t_three
 
-import jdk.nashorn.internal.objects.Global.println
+//import jdk.nashorn.internal.objects.Global.println
 
 class Producer<out T>(val value: T) {
     fun get(): T = value

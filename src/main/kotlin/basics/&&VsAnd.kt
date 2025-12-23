@@ -1,6 +1,7 @@
+/*
 package basics
 
-import com.sun.org.apache.xpath.internal.operations.Bool
+//import com.sun.org.apache.xpath.internal.operations.Bool
 
 val a = 9
 val b = 3
@@ -36,4 +37,4 @@ fun main() {
     aAndB1(true, false)
     aOrB(1, 3)
     aOrB1(true, true)
-}
+}*/
