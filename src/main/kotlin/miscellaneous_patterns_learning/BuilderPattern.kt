@@ -31,6 +31,6 @@ fun main() {
         .addCheese(true)
         .addPepperoni(true)
         .build()
-    println(pizza)  // Shows out put, calls .toString() implicitly, no need to call .toString() explicitly
+    println(pizza)  // Shows output, calls custom defined .toString() implicitly, no need to call .toString() explicitly
     // pizza.toString()    // Doesn't show output
 }
