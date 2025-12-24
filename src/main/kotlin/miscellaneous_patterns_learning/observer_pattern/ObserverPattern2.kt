@@ -32,6 +32,7 @@ class User(override val name: String) : Subscriber {
         println("Hey $name, New notification of $videoTitle is out now")
     }
 }
+
 fun main() {
     val techChannel = YoutubeChannel("Kotlin Learning")
 
