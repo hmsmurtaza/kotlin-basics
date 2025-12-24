@@ -1,4 +1,4 @@
-package miscellaneous_patterns_learning
+package miscellaneous_patterns_learning.builder_pattern
 
 class Pizza private constructor(
     val size: String,
@@ -10,10 +10,7 @@ class Pizza private constructor(
         private var cheese: Boolean = false
         private var pepperoni: Boolean = false
 
-        fun setSize(size: String) = apply {
-            this.size = size
-        }
-
+        fun setSize(size: String) = apply { this.size = size }
         fun addCheese(cheese: Boolean) = apply { this.cheese = cheese }
         fun addPepperoni(pepperoni: Boolean) = apply { this.pepperoni = pepperoni }
 
