@@ -3,7 +3,7 @@ package miscellaneous_patterns_learning.decorator_pattern
 interface Coffee3 {
     fun getCost(): Double
     fun getDescription(): String
-    fun getCoffeeShopLocation(): String
+//    fun getCoffeeShopLocation(): String
 }
 
 // 2. Concrete Component
@@ -28,8 +28,11 @@ fun main() {
     println("Order 1: ${basicCoffee.getDescription()} | Cost: $${basicCoffee.getCost()}")
     val milkDecorator3: Coffee3 = MilkDecorator3(basicCoffee)
     println("Order 2: ${milkDecorator3.getDescription()} | Cost: $${milkDecorator3.getCost()}")
-    val sugarDecorator3: Coffee3 = SugarDecorator3(myOrder3)
+    val sugarDecorator3: Coffee3 = SugarDecorator3(milkDecorator3)
+    println("Order 3: ${sugarDecorator3.getDescription()} | Cost: $${sugarDecorator3.getCost()}")
+    val fullyLoadedCoffee3: Coffee3 = SugarDecorator3(MilkDecorator3(SimpleCoffee3()))
+    println("Order 4: ${fullyLoadedCoffee3.getDescription()} | Cost: $${fullyLoadedCoffee3.getCost()}")
 
-    println("Order: ${myOrder3.getCost()}")
-    println("Total cost: ${myOrder3.getDescription()}")
+//    println("Order: ${myOrder3.getCost()}")
+//    println("Total cost: ${myOrder3.getDescription()}")
 }
