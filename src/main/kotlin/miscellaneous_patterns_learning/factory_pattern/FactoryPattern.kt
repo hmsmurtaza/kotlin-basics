@@ -32,6 +32,8 @@ class NotificationService {
 fun main() {
     val service = NotificationService()
 
+    // We just passed a string.
+    // We don't know how the objects are created inside.
     service.sendNotification("Email")
     service.sendNotification("SMS")
 }
