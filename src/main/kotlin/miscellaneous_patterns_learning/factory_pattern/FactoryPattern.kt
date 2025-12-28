@@ -18,22 +18,50 @@ class EmailNotification: Notification {
     }
 }
 
-class NotificationService {
+
+class WhatsAppNotification: Notification {
+    override fun send() {
+        println("Logic: Sending message through WhatsApp...")
+    }
+}
+
+// Simple way
+/*class NotificationService {
     fun sendNotification(type: String) {
         val notification = when(type) {
             "SMS" -> SMSNotification()
             "Email" -> EmailNotification()
+            "WhatsApp" -> WhatsAppNotification()
             else -> throw IllegalArgumentException("Unknown type")
         }
         return notification.send()
     }
+}*/
+
+// Factory pattern method way
+object NotificationService {
+    fun sendNotification(notification: String): Notification {
+        return when(notification) {
+            "SMS" -> SMSNotification()
+            "Email" -> EmailNotification()
+            "WhatsApp" -> WhatsAppNotification()
+            else -> throw IllegalArgumentException("Wrong type")
+        }
+    }
 }
 
 fun main() {
-    val service = NotificationService()
+    //******************** Other than factory pattern way *******************************
+    //val service = NotificationService()
 
     // We just passed a string.
     // We don't know how the objects are created inside.
-    service.sendNotification("Email")
-    service.sendNotification("SMS")
+    /*service.sendNotification("Email")
+    service.sendNotification("SMS")*/
+    //************************************************************************************
+
+    //********************* With Factory pattern method ways******************************
+    val notificationService = NotificationService.sendNotification("WhatsApp")
+    notificationService.send()
+    //************************************************************************************
 }
