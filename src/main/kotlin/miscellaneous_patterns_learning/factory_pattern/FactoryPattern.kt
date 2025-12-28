@@ -6,14 +6,14 @@ interface Notification {
 
 class SMSNotification : Notification {
     override fun send() {
-        // Specific logic for SMS (e.g, connecting to a cellular gateway)
+        // Specific logic for SMS (e.g., connecting to a cellular gateway)
         println("Logic: Sending SMS via SMS Cellular Service")
     }
 }
 
 class EmailNotification: Notification {
     override fun send() {
-        // Specific logic for Email (e.g, Setting up SMTP or SendGrid)
+        // Specific logic for Email (e.g., Setting up SMTP or SendGrid)
         println("Logic: Sending Email via SMTP server...")
     }
 }
