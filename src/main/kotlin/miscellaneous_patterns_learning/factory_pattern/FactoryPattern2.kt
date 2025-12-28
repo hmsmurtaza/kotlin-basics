@@ -54,7 +54,7 @@ fun main() {
 //    val paymentFactory = PaymentFactory()
 
     val notification = NotificationFactory.createNotification("easypaisa")
-    notification.processPayment(3.4)
+    notification.processPayment(100.0)
     /*paymentFactory.makePayment("Creditcard")
     paymentFactory.makePayment("Paypal")*/
 }
