@@ -15,9 +15,9 @@ class Box<T>(var content: T) {
 
 fun main() {
     val stringBox = Box("String box.")
-    println("${stringBox.getItem()}")
+    println(stringBox.getItem())
     stringBox.updateItem("Updated string box.")
-    println("${stringBox.getItem()}")
+    println(stringBox.getItem())
 
     val intBox = Box(20)
     println("${intBox.getItem()}")
