@@ -1,8 +1,8 @@
-package kotlin_generics
+package kotlin_generics.generic_classes
 
 fun main() {
-    var ageInt: Car<Int> = Car(1984)
-    var ageString: Car<String> = Car("1984")
+    val ageInt: Car<Int> = Car(1984)
+    val ageString: Car<String> = Car("1984")
 }
 
 class Car<T>(year: T) {
