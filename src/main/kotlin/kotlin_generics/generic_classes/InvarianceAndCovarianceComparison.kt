@@ -17,4 +17,5 @@ fun main() {
     val stringBoxCovariant: BoxCovariant<String> = BoxCovariant("Walaikum-Slam")
     // SUCCESS: This works perfectly!
     val anyBoxCovariant: BoxCovariant<Any> = stringBoxCovariant
+    //****************************************************************************************
 }
