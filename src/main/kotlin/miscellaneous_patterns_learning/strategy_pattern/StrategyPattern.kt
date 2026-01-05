@@ -30,5 +30,8 @@ class ShoppingCart(private var paymentStrategy: PaymentStrategy) {
 }
 
 fun main() {
+    val cart = ShoppingCart(CreditCardStrategy())
+    cart.checkout(100)
 
+    println()
 }
