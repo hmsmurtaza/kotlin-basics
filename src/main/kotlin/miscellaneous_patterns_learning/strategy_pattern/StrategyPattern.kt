@@ -33,5 +33,9 @@ fun main() {
     val cart = ShoppingCart(CreditCardStrategy())
     cart.checkout(100)
 
-    println()
+    println("--- User changes mind ---")
+
+    // Switching strategy at runtime
+    cart.setPaymentStrategy(PayPalStrategy())
+    cart.checkout(250)
 }
