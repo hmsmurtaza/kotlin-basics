@@ -48,5 +48,16 @@ class VideoPlayer(var strategy: PlaybackStrategy) {
 }
 
 fun main() {
+    val player = VideoPlayer(NormalStrategy())
+    player.playVideo()
 
+    println("--- User speeds up the video ---")
+
+    player.setPlaybackStrategy(FastForwardStrategy())
+    player.playVideo()
+
+    println("--- User slows down the video ---")
+
+    player.setPlaybackStrategy(SlowMotionStrategy())
+    player.playVideo()
 }
