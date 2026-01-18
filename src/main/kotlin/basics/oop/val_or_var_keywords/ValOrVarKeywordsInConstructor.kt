@@ -6,7 +6,7 @@ class MyClass2<T: Any>(val data2: T?)   // By default T is of type Any?, to make
 
 fun main() {
     val objOfMyClass = MyClass<String>("Assalamu-Alaikum")
-    // println(objOfMyClass.data)  // Error: Couldn't be accessed because data isn't mentioned with val or var
+    // println(objOfMyClass.data)  // Error: Couldn't be accessed because data isn't mentioned with val or var keywords
     val objOfMyClass2 = MyClass2<Int>(39)
     println(objOfMyClass2.data2)    // Success: Could be accessed because it is mentioned with val or var
 
